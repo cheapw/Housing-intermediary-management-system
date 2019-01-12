@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Housing intermediary management system", "Housing intermediary management system\Housing intermediary management system.csproj", "{E256B89C-7DBA-40D7-BB10-DC933E2F7774}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E256B89C-7DBA-40D7-BB10-DC933E2F7774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E256B89C-7DBA-40D7-BB10-DC933E2F7774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E256B89C-7DBA-40D7-BB10-DC933E2F7774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E256B89C-7DBA-40D7-BB10-DC933E2F7774}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39BE0664-1B96-48E3-891C-92F0517E7821}
+	EndGlobalSection
+EndGlobal
