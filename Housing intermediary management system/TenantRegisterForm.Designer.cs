@@ -44,9 +44,11 @@
             // 
             // TbtnCancel
             // 
+            this.TbtnCancel.AutoSize = true;
+            this.TbtnCancel.Font = new System.Drawing.Font("宋体", 15F);
             this.TbtnCancel.Location = new System.Drawing.Point(285, 311);
             this.TbtnCancel.Name = "TbtnCancel";
-            this.TbtnCancel.Size = new System.Drawing.Size(75, 23);
+            this.TbtnCancel.Size = new System.Drawing.Size(75, 30);
             this.TbtnCancel.TabIndex = 28;
             this.TbtnCancel.Text = "取消";
             this.TbtnCancel.UseVisualStyleBackColor = true;
@@ -54,9 +56,11 @@
             // 
             // TbtnRegister
             // 
+            this.TbtnRegister.AutoSize = true;
+            this.TbtnRegister.Font = new System.Drawing.Font("宋体", 15F);
             this.TbtnRegister.Location = new System.Drawing.Point(130, 312);
             this.TbtnRegister.Name = "TbtnRegister";
-            this.TbtnRegister.Size = new System.Drawing.Size(75, 23);
+            this.TbtnRegister.Size = new System.Drawing.Size(75, 30);
             this.TbtnRegister.TabIndex = 27;
             this.TbtnRegister.Text = "注册";
             this.TbtnRegister.UseVisualStyleBackColor = true;
@@ -64,82 +68,93 @@
             // 
             // TtxtboxPhone
             // 
-            this.TtxtboxPhone.Location = new System.Drawing.Point(187, 209);
+            this.TtxtboxPhone.Font = new System.Drawing.Font("宋体", 15F);
+            this.TtxtboxPhone.Location = new System.Drawing.Point(230, 217);
             this.TtxtboxPhone.Name = "TtxtboxPhone";
-            this.TtxtboxPhone.Size = new System.Drawing.Size(177, 21);
+            this.TtxtboxPhone.Size = new System.Drawing.Size(177, 30);
             this.TtxtboxPhone.TabIndex = 22;
             // 
             // TtxtboxName
             // 
-            this.TtxtboxName.Location = new System.Drawing.Point(187, 184);
+            this.TtxtboxName.Font = new System.Drawing.Font("宋体", 15F);
+            this.TtxtboxName.Location = new System.Drawing.Point(230, 180);
             this.TtxtboxName.Name = "TtxtboxName";
-            this.TtxtboxName.Size = new System.Drawing.Size(177, 21);
+            this.TtxtboxName.Size = new System.Drawing.Size(177, 30);
             this.TtxtboxName.TabIndex = 23;
             // 
             // TtxtboxPasswordComfirmed
             // 
-            this.TtxtboxPasswordComfirmed.Location = new System.Drawing.Point(187, 154);
+            this.TtxtboxPasswordComfirmed.Font = new System.Drawing.Font("宋体", 15F);
+            this.TtxtboxPasswordComfirmed.Location = new System.Drawing.Point(230, 144);
             this.TtxtboxPasswordComfirmed.Name = "TtxtboxPasswordComfirmed";
-            this.TtxtboxPasswordComfirmed.Size = new System.Drawing.Size(177, 21);
+            this.TtxtboxPasswordComfirmed.PasswordChar = '*';
+            this.TtxtboxPasswordComfirmed.Size = new System.Drawing.Size(177, 30);
             this.TtxtboxPasswordComfirmed.TabIndex = 24;
             // 
             // TtxtboxPassword
             // 
-            this.TtxtboxPassword.Location = new System.Drawing.Point(187, 128);
+            this.TtxtboxPassword.Font = new System.Drawing.Font("宋体", 15F);
+            this.TtxtboxPassword.Location = new System.Drawing.Point(230, 106);
             this.TtxtboxPassword.Name = "TtxtboxPassword";
             this.TtxtboxPassword.PasswordChar = '*';
-            this.TtxtboxPassword.Size = new System.Drawing.Size(177, 21);
+            this.TtxtboxPassword.Size = new System.Drawing.Size(177, 30);
             this.TtxtboxPassword.TabIndex = 25;
             // 
             // TtxtboxAccount
             // 
-            this.TtxtboxAccount.Location = new System.Drawing.Point(187, 102);
+            this.TtxtboxAccount.Font = new System.Drawing.Font("宋体", 15F);
+            this.TtxtboxAccount.Location = new System.Drawing.Point(230, 69);
             this.TtxtboxAccount.Name = "TtxtboxAccount";
-            this.TtxtboxAccount.Size = new System.Drawing.Size(177, 21);
+            this.TtxtboxAccount.Size = new System.Drawing.Size(177, 30);
             this.TtxtboxAccount.TabIndex = 26;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(128, 212);
+            this.label6.Font = new System.Drawing.Font("宋体", 15F);
+            this.label6.Location = new System.Drawing.Point(113, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 12);
+            this.label6.Size = new System.Drawing.Size(109, 20);
             this.label6.TabIndex = 21;
             this.label6.Text = "联系电话：";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(128, 187);
+            this.label7.Font = new System.Drawing.Font("宋体", 15F);
+            this.label7.Location = new System.Drawing.Point(113, 185);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 12);
+            this.label7.Size = new System.Drawing.Size(69, 20);
             this.label7.TabIndex = 17;
             this.label7.Text = "昵称：";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(128, 157);
+            this.label8.Font = new System.Drawing.Font("宋体", 15F);
+            this.label8.Location = new System.Drawing.Point(113, 148);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 12);
+            this.label8.Size = new System.Drawing.Size(109, 20);
             this.label8.TabIndex = 18;
             this.label8.Text = "确认密码：";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(128, 131);
+            this.label9.Font = new System.Drawing.Font("宋体", 15F);
+            this.label9.Location = new System.Drawing.Point(113, 111);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 12);
+            this.label9.Size = new System.Drawing.Size(69, 20);
             this.label9.TabIndex = 19;
             this.label9.Text = "密码：";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(128, 105);
+            this.label10.Font = new System.Drawing.Font("宋体", 15F);
+            this.label10.Location = new System.Drawing.Point(113, 74);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 12);
+            this.label10.Size = new System.Drawing.Size(89, 20);
             this.label10.TabIndex = 20;
             this.label10.Text = "用户名：";
             // 
@@ -163,7 +178,6 @@
             this.Name = "TenantRegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "房主注册窗口";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TenantRegisterForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

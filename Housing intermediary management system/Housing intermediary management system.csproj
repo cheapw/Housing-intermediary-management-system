@@ -73,6 +73,12 @@
     <Compile Include="RenterMain.Designer.cs">
       <DependentUpon>RenterMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="RenterOfferWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenterOfferWindow.Designer.cs">
+      <DependentUpon>RenterOfferWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenterRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
       <DependentUpon>RenterRegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlHelper.cs" />
+    <Compile Include="TenantAddHousePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenantAddHousePage.Designer.cs">
+      <DependentUpon>TenantAddHousePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="TenantMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,9 @@
     <Compile Include="TenantRegisterForm.Designer.cs">
       <DependentUpon>TenantRegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminRegisterForm.resx">
       <DependentUpon>AdminRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,8 +122,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RenterMain.resx">
+      <DependentUpon>RenterMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterOfferWindow.resx">
+      <DependentUpon>RenterOfferWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RenterRegisterForm.resx">
       <DependentUpon>RenterRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TenantAddHousePage.resx">
+      <DependentUpon>TenantAddHousePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TenantMain.resx">
       <DependentUpon>TenantMain.cs</DependentUpon>

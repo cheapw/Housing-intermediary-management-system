@@ -34,7 +34,7 @@ namespace Housing_intermediary_management_system
             // 打开注册窗口，同时锁定登录窗口
             DialogResult dialogResult = ShowRegisterForm();
             // 根据返回的DialogResult判断注册操作是否被取消
-            if (dialogResult==DialogResult.Cancel)
+            if (dialogResult!=DialogResult.OK)
             {
                 MessageBox.Show("注册操作被取消！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -97,59 +97,60 @@ namespace Housing_intermediary_management_system
             string account = this.txtboxAccount.Text.Trim();
             string password = this.txtboxPassword.Text.Trim();
 
-            VerifyAccount(account, password);
-            
-            
+            // 登录
+            Login(account, password);
         }
 
-        private bool VerifyAccount(string account, string password)
+        private void Login(string account, string password)
         {
             string cmdStr = string.Empty;
 
-            // 获取用户的类型, 根据该类型确定SQL查询语句
+            // 获取用户的类型, 根据类型确定SQL查询语句
             switch (this.cboxUserType.Text)
             {
                 case "租客":
-                    cmdStr=string.Format("Insert Into Renter (Rpassword,Raccount)Values('{0}','{1}');", password, account);
+                    cmdStr=string.Format("Select Count(*) From Renter Where Rpassword='{0}' and Raccount='{1}';", password, account);
                     break;
                 case "房主":
-                    cmdStr = string.Format("Insert Into Tenant (Tpassword,Taccount)Values('{0}','{1}');", password, account);
+                    cmdStr = string.Format("Select Count(*) From Tenant Where Tpassword='{0}' and Taccount='{1}';", password, account);
                     break;
                 case "管理员":
-                    cmdStr = string.Format("Insert Into Admin (Apassword,Aaccount)Values('{0}','{1}');", password, account);
+                    cmdStr = string.Format("Select Count(*) From Admin Where Apassword='{0}' and Aaccount='{1}';", password, account);
                     break;
                 default:
                     throw new Exception("未知用户类型！");
             }
 
 
-            int influencedLines = SqlHelper.Update(cmdStr);
+            int records = SqlHelper.VerifyLoginInfo(cmdStr);
 
-            if (influencedLines == 1)
+            if (records == 1)
             {
-                MessageBox.Show("登录成功！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 switch (this.cboxUserType.Text)
                 {
                     case "租客":
-                        RenterRegisterForm renter = new RenterRegisterForm();
-                        DialogResult dialogFromRenter = renter.ShowDialog();
-                        return dialogFromRenter;
+                        RenterMain renter = new RenterMain(account);
+                        this.Hide();
+                        renter.Show();
+                        break;
                     case "房主":
-                        TenantRegisterForm tenant = new TenantRegisterForm();
-                        DialogResult dialogFromTenant = tenant.ShowDialog();
-                        return dialogFromTenant;
+                        TenantMain tenant = new TenantMain(account);
+                        this.Hide();
+                        tenant.Show();
+                        break;
                     case "管理员":
-                        AdminRegisterForm admin = new AdminRegisterForm();
-                        DialogResult dialogFromAdmin = admin.ShowDialog();
-                        return dialogFromAdmin;
+                        AdminMain admin = new AdminMain(account);
+                        this.Hide();
+                        admin.Show();
+                        break;
                     default:
                         throw new Exception("未知用户类型！");
                 }
+                MessageBox.Show("登录成功！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("数据库操作出现错误，请重试！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false ;
+                MessageBox.Show("用户名或密码错误，亦或者系统连接配置出现问题，请重试！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

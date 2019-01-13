@@ -54,7 +54,7 @@ namespace Housing_intermediary_management_system
 
                 if (influencedLines==1)
                 {
-                    // 将注册窗口的DialogResult设为OK, 
+                    // 将注册窗口的DialogResult设为OK
                     this.DialogResult = DialogResult.OK;
 
                     // 提示用户注册成功，关闭注册窗口，显示登录窗口
@@ -76,13 +76,7 @@ namespace Housing_intermediary_management_system
 
         private void TbtnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
             this.Close();
-        }
-
-        private void AdminRegisterForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

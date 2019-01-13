@@ -66,7 +66,7 @@ namespace Housing_intermediary_management_system
                 //MessageBox.Show($"受影响的行数为{influencedLines}");
                 if (influencedLines == 1)
                 {
-                    // 将注册窗口的DialogResult设为OK, 同时给用户名和密码属性赋值，以便登录窗口直接获取二者的值
+                    // 将注册窗口的DialogResult设为OK
                     this.DialogResult = DialogResult.OK;
 
                     // 提示用户注册成功，关闭注册窗口，显示登录窗口
@@ -88,13 +88,7 @@ namespace Housing_intermediary_management_system
 
         private void RbtnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
             this.Close();
-        }
-
-        private void RenterRegisterForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

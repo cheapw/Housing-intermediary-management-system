@@ -68,7 +68,7 @@ namespace Housing_intermediary_management_system
 
                 if (influencedLines == 1)
                 {
-                    // 将注册窗口的DialogResult设为OK, 同时给用户名和密码属性赋值，以便登录窗口直接获取二者的值
+                    // 将注册窗口的DialogResult设为OK
                     this.DialogResult = DialogResult.OK;
 
                     // 提示用户注册成功，关闭注册窗口，显示登录窗口
@@ -80,7 +80,6 @@ namespace Housing_intermediary_management_system
                     MessageBox.Show("数据库操作出现错误，请重试！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-
             }
             catch (Exception)
             {
@@ -91,13 +90,7 @@ namespace Housing_intermediary_management_system
 
         private void TbtnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
             this.Close();
-        }
-
-        private void TenantRegisterForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
         }
     }
 }
